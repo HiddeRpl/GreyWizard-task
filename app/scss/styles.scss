@@ -15,6 +15,9 @@ body {
   font-family: 'Helvetica Neue', sans-serif;
   color: $font-color;
   background-color: $background-color;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -265,6 +268,7 @@ a:hover, a:focus {
   border-top: 1px solid $footer-border;
   color: $footer-color;
   flex-wrap: wrap;
+  margin-top: 25px;
   @media (max-width: $tablet) {
     padding: 0 15px 55px;
   }

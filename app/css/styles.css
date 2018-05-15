@@ -10,7 +10,17 @@ body {
   font-size: 13px;
   font-family: 'Helvetica Neue', sans-serif;
   color: #515151;
-  background-color: #fafafa; }
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif; }
@@ -212,7 +222,8 @@ a:hover, a:focus {
   border-top: 1px solid #eaeaea;
   color: #afafaf;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+      flex-wrap: wrap;
+  margin-top: 25px; }
   @media (max-width: 768px) {
     .footer {
       padding: 0 15px 55px; } }
