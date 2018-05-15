@@ -1,0 +1,289 @@
+@import "variables";
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../fonts/OpenSans/OpenSans.ttf');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('../fonts/HelveticaNeue/HelveticaNeue.otf');
+}
+
+body {
+  font-size: 13px;
+  font-family: 'Helvetica Neue', sans-serif;
+  color: $font-color;
+  background-color: $background-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", sans-serif;
+}
+
+a, button {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content {
+  padding-top: calc(#{$navbar-height} + 50px);
+  @media (max-width: $phone) {
+    padding-top: 50px;
+  }
+}
+
+.header {
+  color: $primary-color;
+  font-size: 2.1em;
+  font-family: "Helvetica Neue", sans-serif;
+  margin-bottom: 50px;
+
+  .subheader {
+    margin-top: 14px;
+    font-weight: normal;
+    color: #6c6c6c;
+    font-size: 0.8rem;
+  }
+}
+
+.section {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease;
+  margin-top: 30px;
+}
+
+.section.open {
+  max-height: 700px;
+}
+
+.section-title {
+  font-size: 1.5em;
+}
+
+.table-wrapper {
+  overflow: auto;
+}
+
+.table-content {
+  width: 100%;
+  border: 1px solid $shadow-color;
+  border-spacing: 0;
+  border-collapse: collapse;
+  min-width: 600px;
+
+  &__head {
+    background-color: $background-color--darker;
+    text-align: left;
+    border-bottom: 1px solid $shadow-color;
+
+    &__header {
+      padding: 20px 12px;
+      width: 28%;
+      font-weight: normal;
+
+      &:last-of-type {
+        width: 44%;
+      }
+    }
+  }
+
+  &__body {
+    background-color: #fff;
+
+    & > * {
+      border-bottom: 1px solid $shadow-color;
+    }
+
+    &__el {
+      padding: 20px 12px;
+      position: relative;
+
+      &:last-of-type {
+        padding-right: 65px;
+      }
+
+      &:last-of-type:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 53px;
+        margin: auto;
+        height: 60%;
+        width: 1px;
+        background-color: $shadow-color;
+      }
+    }
+  }
+}
+
+.button-wrapper {
+  background-color: $background-color--darker;
+  border: 1px solid $shadow-color--darker;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.section__button {
+  background-color: $primary-color;
+  border: none;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  padding: 13px;
+  min-width: 180px;
+  max-height: 45px;
+  cursor: pointer;
+  @media (max-width: $tablet) {
+    min-width: 100px;
+    padding: 10px 13px;
+  }
+}
+
+.section-content {
+  background-color: #fff;
+  padding: 5px 20px;
+}
+
+.registration {
+  max-width: 400px;
+  padding-bottom: 10px;
+
+  &__info {
+    color: $succeed-color;
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    &:last-child {
+      .registration__form__el.error {
+        margin-bottom: 35px;
+      }
+    }
+
+    &__el {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+      flex-basis: 48%;
+      width: 48%;
+      height: 58px;
+      min-width: 192px;
+      margin-right: 12px;
+      margin-bottom: 10px;
+
+      .validate-block {
+        display: none;
+        position: absolute;
+        bottom: -30px;
+        padding-left: 15px;
+        font-size: 0.7em;
+      }
+    }
+
+    &__el:last-child {
+      margin-right: 0;
+    }
+
+    &__el--smaller {
+      flex-basis: 23%;
+      width: 23%;
+      min-width: 92px;
+    }
+
+    &__el.error {
+      border-bottom-color: $error-color;
+
+      .form__label {
+        color: $error-font;
+      }
+
+      .validate-block {
+        display: block;
+        color: $error-font;
+        .up_arrow_icon {
+          fill: $error-font;
+        }
+      }
+    }
+
+    &__el.succeed {
+      border-bottom-color: $succeed-border-color;
+
+      .form__label {
+        color: $succeed-color;
+
+        .check_icon {
+          display: block;
+        }
+      }
+    }
+
+    .form__label {
+      font-size: 0.8em;
+      color: $label-color;
+      margin-bottom: 10px;
+      position: relative;
+      width: fit-content;
+    }
+
+    .form__input {
+      border: none;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+        color: $placeholders-color2;
+      }
+    }
+
+    .form__input--card {
+      margin-left: 20px;
+    }
+
+    .form__input--credit {
+      margin-right: 40px;
+    }
+  }
+}
+
+.footer {
+  padding: 0 120px 55px;
+  background-color: $background-color;
+  border-top: 1px solid $footer-border;
+  color: $footer-color;
+  flex-wrap: wrap;
+  @media (max-width: $tablet) {
+    padding: 0 15px 55px;
+  }
+
+  &__el {
+    margin-right: 40px;
+    margin-top: 20px;
+  }
+
+  &__social {
+    margin-top: 20px;
+    margin-right: 15px;
+  }
+}
+
+@import "navbar";
+@import "grid";
+@import "inputs";
+@import "combobox";
+@import "accordion";
+@import "promotionBox";
+@import "icons";

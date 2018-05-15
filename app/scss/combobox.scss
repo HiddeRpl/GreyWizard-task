@@ -1,0 +1,45 @@
+@import "variables";
+
+.combo-box {
+  text-align: left;
+  height: 100%;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 100%;
+    list-style-type: none;
+    border: 1px solid $shadow-color--darker;
+    border-bottom-color: $inputs-border;
+    text-align: left;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s linear;
+    z-index: 2;
+  }
+
+  &.open &__list {
+    max-height: 70px;
+  }
+
+  &__el {
+    padding: 10px 20px;
+    border-bottom: 1px solid $shadow-color--darker;
+    transition: background-color .3s ease;
+
+    &:last-child {
+      border: none;
+    }
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}

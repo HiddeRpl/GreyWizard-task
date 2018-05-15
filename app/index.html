@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--build:css css/styles.min.css-->
+    <link rel="stylesheet" href="lib/Normalize/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--endbuild-->
+
+    <title>GreyWizard's task</title>
+</head>
+<body>
+
+<header class="navbar">
+    <svg class="navbar__logo">
+        <use xlink:href="images/icons.svg#top_logo" />
+    </svg>
+    <nav class="navbar__nav">
+        <ul>
+            <li class="navbar__nav__link">
+                <a class="valign-center halign-center" href="#">Add a site</a>
+            </li>
+            <li class="navbar__nav__link">
+                <a class="valign-center halign-center" href="#">Support</a>
+            </li>
+            <li class="navbar__nav__link">
+                <a class="account halign-center valign-center" href="#">
+                    <svg class="user-icon">
+                        <use xlink:href="images/icons.svg#user_icon" />
+                    </svg>
+                    <svg class="dropdown-icon">
+                        <use xlink:href="images/icons.svg#dropdown_icon" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <button class="hamburger hamClick"></button>
+    <nav class="navbar__nav--mobile">
+        <svg class="navbar__nav--mobile__logo">
+            <use xlink:href="images/icons.svg#top_logo" />
+        </svg>
+        <ul>
+            <li class="navbar__nav--mobile__link">
+                <a class="valign-center halign-center" href="#">Add a site</a>
+            </li>
+            <li class="navbar__nav--mobile__link">
+                <a class="valign-center halign-center" href="#">Support</a>
+            </li>
+            <li class="navbar__nav--mobile__link">
+                <a class="account" href="#">
+                    <svg class="user-icon">
+                        <use xlink:href="images/icons.svg#user_icon" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main class="content">
+    <div class="container">
+        <h1 class="header">
+            Dodaj stronę
+            <div class="subheader">
+                Samodzielna Konfiguracja Tarczy nie jest skomplikowana i nie wymaga specjalistycznej wiedzy.
+            </div>
+        </h1>
+        <form>
+            <section class="section open">
+                <h2 class="section-title">
+                    Lista domen
+                </h2>
+                <div class="table-wrapper">
+                    <table class="table-content">
+                        <thead class="table-content__head">
+                        <tr>
+                            <th class="table-content__head__header">Domena / Subdomena</th>
+                            <th class="table-content__head__header">Adres IP</th>
+                            <th class="table-content__head__header">SSL</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table-content__body domainsList">
+                        <tr class="row">
+                            <td class="table-content__body__el">
+                                <input class="input table-input" type="text" value="onet.pl">
+                            </td>
+                            <td class="table-content__body__el">
+                                <input class="input table-input ipInput" type="text" value="123.123.123.12">
+                                <svg class="icon check-icon">
+                                    <use xlink:href="images/icons.svg#check_icon" />
+                                </svg>
+                            </td>
+                            <td class="table-content__body__el">
+                                <div class="input table-input combo-box">
+                                    <span class="combo-box__val">No</span>
+                                    <ul class="combo-box__list">
+                                        <li class="combo-box__el" data-value="No">No</li>
+                                        <li class="combo-box__el" data-value="Yes">Yes</li>
+                                    </ul>
+                                    <svg class="icon dropdown-icon">
+                                        <use xlink:href="images/icons.svg#dropdown_icon" />
+                                    </svg>
+                                </div>
+                                <svg class="icon lock-icon chosen">
+                                    <use xlink:href="images/icons.svg#lock_icon" />
+                                </svg>
+                                <svg class="icon locked-icon">
+                                    <use xlink:href="images/icons.svg#locked_icon" />
+                                </svg>
+                                <svg class="icon delete-icon deleteDomain">
+                                    <use xlink:href="images/icons.svg#delete_icon" />
+                                </svg>
+                            </td>
+                        </tr>
+                        <tr class="addWrapper">
+                            <td class="table-content__body__el">
+                                <button type="button" class="input table-input add addDomain">Dodaj domenę...</button>
+                                <svg class="icon plus-icon">
+                                    <use xlink:href="images/icons.svg#plus_icon" />
+                                </svg>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tbody>
+                    </table>
+                </div>
+                <div class="button-wrapper">
+                    <button class="section__button nextSection" type="button">GOTOWE</button>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section-title">
+                    Wybierz pakiet ochrony
+                </h2>
+                <div class="section-accordion">
+                    <h3 class="accordion__title halign-spbetween accordionTitle" data-target="basic">BASIC
+                        <div class="spacer"></div>
+                        <span class="accordion__title__price">5
+                            <span class="accordion__title__unit">PLN / miesiąc</span>
+                        </span>
+                    </h3>
+                    <div id="basic" class="accordion__content accordionContent">
+                        <h4 class="accordion__content__title">Zawiera między innymi:</h4>
+                        <div class="accordion__content__bullets">
+                            <ul class="bullets-wrapper">
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg><100Mbps ruchu generowanego przez stronę
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>20Gbps Ochrony przed DDoS
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Obsługa SSL
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Wsparcie SLA
+                                </li>
+                            </ul>
+                            <ul class="bullets-wrapper">
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Web application firewall (WAF)
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Statystyki i wykresy
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>API
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>24/7 Wsparcie E-mail
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="accordion__content__footer halign-spbetween valign-center">
+                            <a href="#" class="valign-center">
+                                Więcej informacji o tym i pozostałych planach
+                                <svg class="icon more-icon">
+                                    <use xlink:href="images/icons.svg#more_icon" />
+                                </svg>
+                            </a>
+                            <div class="spacer"></div>
+                            <button class="section__button nextSection" type="button">WYBIERAM</button>
+                        </div>
+                    </div>
+                    <h3 class="accordion__title halign-spbetween open accordionTitle" data-target="bussiness">BUSSINESS
+                        <span class="accordion__title__label">REKOMENDOWANY</span>
+                        <div class="spacer"></div>
+                        <span class="accordion__title__price">10
+                            <span class="accordion__title__unit">PLN / miesiąc</span>
+                        </span>
+                    </h3>
+                    <div id="bussiness" class="accordion__content accordionContent open">
+                        <h4 class="accordion__content__title">Zawiera między innymi:</h4>
+                        <div class="accordion__content__bullets">
+                            <ul class="bullets-wrapper">
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg><100Mbps ruchu generowanego przez stronę
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>20Gbps Ochrony przed DDoS
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Obsługa SSL
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Wsparcie SLA
+                                </li>
+                            </ul>
+                            <ul class="bullets-wrapper">
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Web application firewall (WAF)
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Statystyki i wykresy
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>API
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>24/7 Wsparcie E-mail
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="accordion__content__footer halign-spbetween valign-center">
+                            <a href="#" class="valign-center">
+                                Więcej informacji o tym i pozostałych planach
+                                <svg class="icon more-icon">
+                                    <use xlink:href="images/icons.svg#more_icon" />
+                                </svg>
+                            </a>
+                            <div class="spacer"></div>
+                            <button class="section__button nextSection" type="button">
+                                WYBIERAM
+                                <span class="promotion accordion__promotion valign-center halign-center">
+                                    10
+                                    <span class="accordion__promotion--small">dni gratis</span>
+                                    <span class="accordion__promotion__line"></span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="accordion__title halign-spbetween accordionTitle" data-target="pro">PRO
+                        <div class="spacer"></div>
+                        <span class="accordion__title__price">100
+                            <span class="accordion__title__unit">PLN / miesiąc</span>
+                        </span>
+                    </h3>
+                    <div id="pro" class="accordion__content accordionContent">
+                        <h4 class="accordion__content__title">Zawiera między innymi:</h4>
+                        <div class="accordion__content__bullets">
+                            <ul class="bullets-wrapper">
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg><100Mbps ruchu generowanego przez stronę
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>20Gbps Ochrony przed DDoS
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Obsługa SSL
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Wsparcie SLA
+                                </li>
+                            </ul>
+                            <ul class="bullets-wrapper">
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Web application firewall (WAF)
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Statystyki i wykresy
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>API
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>24/7 Wsparcie E-mail
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="accordion__content__footer halign-spbetween valign-center">
+                            <a href="#" class="valign-center">
+                                Więcej informacji o tym i pozostałych planach
+                                <svg class="icon more-icon">
+                                    <use xlink:href="images/icons.svg#more_icon" />
+                                </svg>
+                            </a>
+                            <div class="spacer"></div>
+                            <button class="section__button nextSection" type="button">WYBIERAM</button>
+                        </div>
+                    </div>
+                    <h3 class="accordion__title halign-spbetween accordionTitle" data-target="enterprise">ENTERPRISE
+                        <div class="spacer"></div>
+                        <span class="accordion__title__price">
+                            <span class="accordion__title__unit">Wycena indywidualna</span>
+                        </span>
+                    </h3>
+                    <div id="enterprise" class="accordion__content accordionContent">
+                        <h4 class="accordion__content__title">Zawiera między innymi:</h4>
+                        <div class="accordion__content__bullets">
+                            <ul class="bullets-wrapper">
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg><100Mbps ruchu generowanego przez stronę
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>20Gbps Ochrony przed DDoS
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Obsługa SSL
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Wsparcie SLA
+                                </li>
+                            </ul>
+                            <ul class="bullets-wrapper">
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Web application firewall (WAF)
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>Statystyki i wykresy
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>API
+                                </li>
+                                <li class="bullets__el">
+                                    <svg class="icon check-icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>24/7 Wsparcie E-mail
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="accordion__content__footer halign-spbetween valign-center">
+                            <a href="#" class="valign-center">
+                                Więcej informacji o tym i pozostałych planach
+                                <svg class="icon more-icon">
+                                    <use xlink:href="images/icons.svg#more_icon" />
+                                </svg>
+                            </a>
+                            <div class="spacer"></div>
+                            <button class="section__button nextSection" type="button">WYBIERAM</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section-title">
+                    Autoryzuj swoją rejestrację i włącz ochronę
+                </h2>
+                <div class="section-content">
+                    <div class="registration">
+                        <p class="registration__info">
+                            Spokojnie, nie obciążymy Twojej karty bez uprzedniej zgody.<br>
+                            Zawsze możesz zrezygnować.
+                        </p>
+                        <div class="registration__form">
+                            <div class="input registration__form__el">
+                                <label class="form__label" for="card-number">Numer karty</label>
+                                <input class="form__input form__input--card" id="card-number" type="text"
+                                       onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="12">
+                                <img class="icon card_icon" src="images/card.png" alt="Mastercard" aria-hidden="true">
+                            </div>
+                            <div class="input registration__form__el registration__form__el--smaller">
+                                <label class="form__label" for="safe-code">Kod Bezp</label>
+                                <input class="form__input form__input--credit" id="safe-code" type="text"
+                                       onkeypress='return event.charCode >= 48 && event.charCode <= 57' maxlength="3">
+                                <svg class="icon credit_card_element">
+                                    <use xlink:href="images/icons.svg#credit_card_element" />
+                                </svg>
+                            </div>
+                            <div class="input registration__form__el registration__form__el--smaller">
+                                <label class="form__label" for="validity">Ważność</label>
+                                <input class="form__input" id="validity" type="text" placeholder="od / do"
+                                       onkeypress='return event.charCode >= 47 && event.charCode <= 57' maxlength="5">
+                            </div>
+                        </div>
+                        <div class="registration__form">
+                            <div class="input registration__form__el">
+                                <label class="form__label" for="firstname">
+                                    Imię
+                                    <svg class="icon check_icon">
+                                        <use xlink:href="images/icons.svg#check_icon" />
+                                    </svg>
+                                </label>
+                                <input class="form__input nameValidation" id="firstname" type="text">
+                                <span class="validate-block">
+                                    <svg class="icon up_arrow_icon">
+                                        <use xlink:href="images/icons.svg#up_arrow" />
+                                    </svg>
+                                    To nie jest imię. Imię to wyraz na ogół ustawiany
+                                    przed nazwiskiem.
+                                </span>
+                            </div>
+                            <div class="input registration__form__el">
+                                <label class="form__label" for="surname">Nazwisko</label>
+                                <input class="form__input nameValidation" id="surname" type="text">
+                                <span class="validate-block">
+                                    <svg class="icon up_arrow_icon">
+                                        <use xlink:href="images/icons.svg#up_arrow" />
+                                    </svg>
+                                    To nie jest nazwisko. Nazwisko to wyraz na ogół ustawiany
+                                    za imieniem.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-wrapper">
+                    <button class="section__button nextSection" type="submit">
+                        WŁĄCZ OBRONĘ
+                        <span class="promotion registration__promotion">
+                            Jesteś chroniony już w momencie rejestracji!
+                            <span class="registration__promotion--small">
+                                W każdej chwili możesz zrezygnować!
+                            </span>
+                        </span>
+                    </button>
+                </div>
+            </section>
+        </form>
+    </div>
+</main>
+
+<footer class="footer valign-center halign-spbetween">
+    <svg class="icon footer_logo">
+        <use xlink:href="images/icons.svg#footer_logo" />
+    </svg>
+    <a class="footer__el" href="#">Support</a>
+    <a class="footer__el" href="#">GreyWizard.com</a>
+    <div class="spacer"></div>
+    <div class="valign-center">
+        <a class="footer__social" href="#">
+            <svg class="icon social_icon">
+                <use xlink:href="images/icons.svg#facebook_icon" />
+            </svg>
+        </a>
+        <a class="footer__social" href="#">
+            <svg class="icon social_icon">
+                <use xlink:href="images/icons.svg#twitter_icon" />
+            </svg>
+        </a>
+        <a class="footer__social" href="#">
+            <svg class="icon social_icon">
+                <use xlink:href="images/icons.svg#linkedin_icon" />
+            </svg>
+        </a>
+    </div>
+</footer>
+
+<!--build:js js/main.min.js-->
+<script src="js/main.js"></script>
+<script src="js/accordion.js"></script>
+<!--endbuild-->
+</body>
+</html>

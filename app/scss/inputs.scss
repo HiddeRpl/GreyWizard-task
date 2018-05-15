@@ -1,0 +1,36 @@
+@import "variables";
+
+.input {
+  border: 1px solid $shadow-color--darker;
+  border-bottom-color: $inputs-border;
+  padding: 9px 11px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: $placeholders-color;
+  }
+}
+
+.table-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.table-input.combo-box {
+  width: 30%;
+}
+
+.table-input.add {
+  padding-left: 20px;
+  text-align: left;
+  color: $placeholders-color;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.input.validate {
+  background-color: #fbfbfb;
+}

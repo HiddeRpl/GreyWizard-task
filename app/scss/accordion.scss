@@ -1,0 +1,124 @@
+.section-accordion {
+  border: 1px solid $shadow-color;
+}
+
+.accordion__title {
+  position: relative;
+  background-color: $background-color--darker;
+  color: $primary-color;
+  font-size: 1.4em;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 20px 20px 20px 50px;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid $shadow-color;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 16px;
+  }
+
+  &__price {
+    color: $font-color;
+    font-size: 1.1rem;
+  }
+
+  &__unit {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+
+  &__label {
+    font-size: 0.6rem;
+    align-self: center;
+    margin-left: 10px;
+    background-color: $accent-color;
+    border-radius: 5px;
+    padding: 3px 6px;
+    letter-spacing: 0.8px;
+    color: #fff;
+  }
+
+}
+
+.accordion__title.open {
+  color: $font-color;
+  background-color: #fff;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $primary-color;
+    border: 1px solid $shadow-color;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 22px;
+  }
+}
+
+.accordion__content {
+  background-color: #fff;
+  padding-left: 50px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+
+  &__title {
+    margin: 0;
+    font-family: "Helvetica Neue", sans-serif;
+  }
+
+  &__bullets {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .bullets-wrapper {
+    list-style-type: none;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    flex-basis: 350px;
+
+    .bullets__el {
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    &:first-child {
+      @media (max-width: $phone) {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid $shadow-color;
+    color: $primary-color;
+    padding: 20px 20px 20px 0;
+
+    .section__button {
+      color: #fff;
+    }
+  }
+}
+
+.accordion__content.open {
+  max-height: 370px;
+}
